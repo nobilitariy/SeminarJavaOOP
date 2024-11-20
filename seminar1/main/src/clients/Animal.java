@@ -70,4 +70,17 @@ public class Animal {
     public String toString() {
         return String.format("nickname = %s, bd = %s, owner = %s, illness = %s", nickname, birthDate, owner, illness);
     }
+
+    public void toGo(){
+        System.out.println("Ia poshel");
+    } 
+
+    public void fly(){
+        System.out.println("Ia poletel");
+    }
+
+    public void swim(){
+        System.out.println("Ia poplil");
+    }
+
 }
