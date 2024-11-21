@@ -1,12 +1,11 @@
 package clients;
 import java.time.LocalDate;
 
-public class Animal {
+public abstract class Animal {
     protected String nickname;
     protected Owner owner; 
     protected LocalDate birthDate;
     protected Illness illness;
-    
     
     public Animal() {
         this("klichka", new Owner("hoziain"), LocalDate.now(), new Illness("boleet"));
@@ -48,19 +47,17 @@ public class Animal {
         System.out.printf("Животное %s проснулось в %s ", nickname, time);
     }
 
-    private void hunt(){
-        System.out.println("Животное ест");
-    }
+    public abstract void hunt();
 
     private void sleep(){
         System.out.println("Животное спит");
     }
     
-    public void lifeCycle(){
-        wakeUp("12");
-        hunt();
-        sleep();
-    }
+    // public void lifeCycle(){
+    //     wakeUp("12");
+    //     hunt();
+    //     sleep();
+    // }
 
     public String getType(){
         return getClass().getSimpleName();
@@ -71,9 +68,9 @@ public class Animal {
         return String.format("nickname = %s, bd = %s, owner = %s, illness = %s", nickname, birthDate, owner, illness);
     }
 
-    public void toGo(){
-        System.out.println("Ia poshel");
-    } 
+    // public void toGo(){
+    //     System.out.println("Ia poshel");
+    // } 
 
     public void fly(){
         System.out.println("Ia poletel");

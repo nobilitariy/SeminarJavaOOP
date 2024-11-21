@@ -2,7 +2,7 @@ package clients;
 
 import java.time.LocalDate;
 
-public class Cat extends Animal {
+public class Cat extends Animal implements Goable, Huntable {
     Double discount;
 
     public Cat(String nickname, Owner owner, LocalDate birthDate, Illness illness, Double disccount){
@@ -36,4 +36,16 @@ public class Cat extends Animal {
     public void swim() {
         System.out.println("Ia ploho plavaiy");
     }
+
+    @Override
+    public void hunt() {
+        System.out.println("kyshaiy"); 
+    }
+
+    @Override
+    public void go() {
+        // TODO Auto-generated method stub
+        throw new UnsupportedOperationException("Unimplemented method 'go'");
+    }
+    
 }

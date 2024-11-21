@@ -5,6 +5,7 @@ import java.util.List;
 import clients.Animal;
 import clients.Cat;
 import clients.Dog;
+import clients.Goable;
 import clients.Illness;
 import clients.Owner;
 import clients.Ytka;
@@ -13,7 +14,7 @@ import clients.Ytka;
 
 public class App {
     public static void main(String[] args) throws Exception {
-        // Animal cat = new Animal("miay", new Owner("Artem"), LocalDate.of(2000, 10, 13), new Illness("kashel"));
+        Animal cat = new Cat("miay", new Owner("Artem"), LocalDate.of(2000, 10, 13), new Illness("kashel"), 10D);
         // System.out.println(cat.getOwner());
         // System.out.println(cat.getNickname());
         // System.out.println(cat.getIllness());
@@ -40,5 +41,22 @@ public class App {
         // ytka.toGo();
         // catty.fly();
         
+        List<Goable> list = new ArrayList<>();
+        Cat cat2 = new Cat();
+        Dog dog2 = new Dog();
+        list.add(cat2);
+        list.add(dog2);
+        System.out.println(list);
+
+        Animal animal = new Animal() {
+
+            @Override
+            public void hunt() {
+                // TODO Auto-generated method stub
+                throw new UnsupportedOperationException("Unimplemented method 'hunt'");
+            }
+            
+        };
+
     }
 }
